@@ -31,4 +31,9 @@ public class PlayerControl : MonoBehaviour
     {
         this.moveSpeed = newSpeed;
     }
+
+    public void Hit()
+    {
+        Debug.Log("Player is Hit by Beast");
+    }
 }

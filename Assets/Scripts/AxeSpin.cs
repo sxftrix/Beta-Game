@@ -2,14 +2,13 @@ using System.Drawing;
 using UnityEngine;
 
 public class AxeSpin : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
-    public Vector3 rotationSpeed = new(0, 0, 500);
+{   
+    public float rotationSpeed = 1;
+    private Vector3 rotationVector = new(0, 0, 100);
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotationSpeed * Time.deltaTime);
+        transform.Rotate(rotationVector * rotationSpeed * Time.deltaTime);
     }
 }

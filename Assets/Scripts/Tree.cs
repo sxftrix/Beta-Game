@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour, IChop
 {
-    public int scrapYield;
+    private int scrapYield = 1;
 
     public void Chop()
     {
-        //insert Scrap function here
+        GameManager.Instance.GainScrap(scrapYield);
         Destroy(gameObject);
     }
 
