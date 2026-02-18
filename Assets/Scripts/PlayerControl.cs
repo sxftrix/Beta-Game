@@ -34,6 +34,7 @@ public class PlayerControl : MonoBehaviour
 
     public void Hit()
     {
+        GameManager.Instance.EndGame();
         Debug.Log("Player is Hit by Beast");
     }
 }

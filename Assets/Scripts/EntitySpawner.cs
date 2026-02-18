@@ -5,9 +5,6 @@ public class EntitySpawner : MonoBehaviour
 {
     public GameObject entity;
     public float minSpawnDistance, maxSpawnDistance, spawnDelay;
-
-
-
     private Transform playerTransform;
     public void Start()
     {
@@ -38,9 +35,9 @@ public class EntitySpawner : MonoBehaviour
         StartCoroutine(SpawnEntity(entityToSpawn, spawnMinDistance, spawnMaxDistance, delay));
     }
 
-    public void UpdateBeastSpeed(float addSpeed)
+    public void UpgradeBeast()
     {
-        Beast beast = entity.GetComponent<Beast>();
-        beast.moveSpeed += addSpeed;
+        Beast upgrade = entity.GetComponent<Beast>();
+        upgrade.Upgrade();
     }
 }

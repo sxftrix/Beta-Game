@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance {  get; private set; }
 
     public TextMeshProUGUI scrapText;
+    public TextMeshProUGUI goldText;
 
     private void Awake()
     {
@@ -35,5 +36,10 @@ public class UIManager : MonoBehaviour
     public void UpdateScrapText(int totalScrap)
     {
         scrapText.text = totalScrap.ToString();
+    }
+
+    public void UpdateGoldText(int totalGold)
+    {
+        goldText.text = totalGold.ToString();
     }
 }

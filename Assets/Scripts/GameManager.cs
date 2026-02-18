@@ -4,9 +4,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public GameObject spawner;
+    public GameObject BeastSpawner, TreeSpawner;
 
+    public int maxScrapEarnable;
     public int totalScrapEarned;
+    public int totalGoldEarned;
     public float timeElapsed;
     public float beastDifficultyModifier;
 
@@ -21,13 +23,12 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        InvokeRepeating("IncreaseDifficulty", 5f, 5f);
+        InvokeRepeating("IncreaseDifficulty", 2.5f, 2.5f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timeElapsed += Time.deltaTime;
@@ -39,13 +40,25 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.UpdateScrapText(totalScrapEarned);
     }
 
+    public void GainGold(int gain)
+    {
+        totalGoldEarned += gain;
+    }
+
     public void IncreaseDifficulty()
     {
-        EntitySpawner beastSpawner = spawner.GetComponent<EntitySpawner>();
-        beastSpawner.UpdateBeastSpeed(beastDifficultyModifier);
-        if (beastSpawner.spawnDelay > 0.10f)
-        {
-            beastSpawner.spawnDelay -= 0.10f;
-        }
+        EntitySpawner beastSpawner = BeastSpawner.GetComponent<EntitySpawner>();
+
+    }
+
+    public bool reachedMaxScrap()
+    {
+        return totalScrapEarned == maxScrapEarnable;
+    }
+
+    public void EndGame()
+    {
+        Time.timeScale = 0;
+        Debug.Log("Game Over");
     }
 }
