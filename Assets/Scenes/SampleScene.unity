@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 6352872892738956157, guid: fb2b1b205707f964c9b1818db6cebcae, type: 3}
-  minSpawnDistance: 30
-  maxSpawnDistance: 35
+  minSpawnDistance: 50
+  maxSpawnDistance: 60
   spawnDelay: 1.5
 --- !u!1 &519420028
 GameObject:
@@ -1195,6 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrapText: {fileID: 1895599674}
+  goldText: {fileID: 0}
 --- !u!1 &1889973274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,8 +1422,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c642a24c1f82647a50ce4ede9545fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 428312552}
+  BeastSpawner: {fileID: 0}
+  TreeSpawner: {fileID: 0}
+  maxScrapEarnable: 0
   totalScrapEarned: 0
+  totalGoldEarned: 0
   timeElapsed: 0
   beastDifficultyModifier: 0.5
 --- !u!1001 &1906356948575844905
@@ -1435,11 +1439,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 860733197881997229, guid: 1deeed529bbc821469a5cde17e8dcd03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: 602.5
       objectReference: {fileID: 0}
     - target: {fileID: 860733197881997229, guid: 1deeed529bbc821469a5cde17e8dcd03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: -103
       objectReference: {fileID: 0}
     - target: {fileID: 860733197881997229, guid: 1deeed529bbc821469a5cde17e8dcd03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1479,7 +1483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289506278842731452, guid: 1deeed529bbc821469a5cde17e8dcd03, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1494,13 +1498,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1607873357098070501, guid: fb2b1b205707f964c9b1818db6cebcae, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5165094026951267654, guid: fb2b1b205707f964c9b1818db6cebcae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.226242
+      value: 599.27374
       objectReference: {fileID: 0}
     - target: {fileID: 5165094026951267654, guid: fb2b1b205707f964c9b1818db6cebcae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2583091
+      value: -109.74169
       objectReference: {fileID: 0}
     - target: {fileID: 5165094026951267654, guid: fb2b1b205707f964c9b1818db6cebcae, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1540,7 +1548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6352872892738956157, guid: fb2b1b205707f964c9b1818db6cebcae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
