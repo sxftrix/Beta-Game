@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class UpgradeUI : MonoBehaviour
 {
@@ -15,22 +16,39 @@ public class UpgradeUI : MonoBehaviour
             Debug.LogWarning("UpgradeUI: No TextMeshProUGUI attached to UpgradeUI");
         }
     }
+
+    void Start()
+    {
+        SettlementBuilding.OnBuildingEnable += ActivateUI;
+    }
     
     void OnEnable() 
     {
-        Building.OnCostChanged += UpdateDisplay;
+        SettlementBuilding.OnCostChanged += UpdateDisplay;
     }
 
     void OnDisable() 
     {
-        Building.OnCostChanged -= UpdateDisplay;
+        SettlementBuilding.OnCostChanged -= UpdateDisplay;
     }
 
-    private void UpdateDisplay(string buildingName, int newCost)
+    private void UpdateDisplay(Dictionary<string, int> upgradeCosts, string buildingName)
     {
         if (buildingName == targetBuilding)
         {
-            textElement.text = "Cost: " + newCost;
+            textElement.text = "";
+            foreach (var costs in upgradeCosts)
+            {
+                textElement.text = costs.Key.ToString() + ": " + costs.Value.ToString() + "\n";
+            }
+        }
+    }
+
+    private void ActivateUI(string buildingName)
+    {
+        if (buildingName == targetBuilding)
+        {
+            this.gameObject.SetActive(true);
         }
     }
 }

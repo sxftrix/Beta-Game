@@ -16,14 +16,19 @@ public class LevelUI : MonoBehaviour
         }
     }
     
+    void Start()
+    {
+        SettlementBuilding.OnBuildingEnable += ActivateUI;
+    }
+    
     void OnEnable() 
     {
-        Building.OnBuildingUpgraded += UpdateDisplay;
+        SettlementBuilding.OnBuildingUpgraded += UpdateDisplay;
     }
 
     void OnDisable() 
     {
-        Building.OnBuildingUpgraded -= UpdateDisplay;
+        SettlementBuilding.OnBuildingUpgraded -= UpdateDisplay;
     }
 
     private void UpdateDisplay(string buildingName, int newLevel)
@@ -31,6 +36,14 @@ public class LevelUI : MonoBehaviour
         if (buildingName == targetBuilding)
         {
             textElement.text = newLevel.ToString();
+        }
+    }
+    
+    private void ActivateUI(string buildingName)
+    {
+        if (buildingName == targetBuilding)
+        {
+            this.gameObject.SetActive(true);
         }
     }
 }
