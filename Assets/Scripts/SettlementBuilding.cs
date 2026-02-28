@@ -20,11 +20,16 @@ public class SettlementBuilding : SerializedMonoBehaviour
     
     [Header("Turbo Mode: Turn on to boost Resource Gain by 2x")]
     [SerializeField] private bool TurboMode;
-    
+
+    //For communication between scripts w/o coupling
     public static event Action<int> OnMainLevelUp;
     public static event Action<string, Dictionary<string, int>> OnCostChanged;
     public static event Action<string, int> OnBuildingUpgraded;
-    
+
+    //For Displaying Messages
+    public static event Action<string> OnMessageTrigger;
+    private string message;
+
     private int _gainPerSecond;
     private int _currentLevel;
     private int _upgradeCost;
@@ -143,7 +148,9 @@ public class SettlementBuilding : SerializedMonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough Resources to upgrade to Level " + (_currentLevel + 1));
+            message = "Not enough Resources to upgrade " + buildingName + " to Level " + (_currentLevel + 1);
+            OnMessageTrigger?.Invoke(message);
+            Debug.Log(message);
         }
     }
 }
