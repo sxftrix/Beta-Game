@@ -188,8 +188,9 @@ GameObject:
   - component: {fileID: 2997737303353298852}
   - component: {fileID: 8575490762771897666}
   - component: {fileID: 8726774803332471734}
+  - component: {fileID: 4584655969015210000}
   m_Layer: 0
-  m_Name: PlantPot
+  m_Name: PlantPot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +320,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7099093662558331922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e77fe347e0da60418dc3681f0263524, type: 3}
   m_Name: 
@@ -327,5 +328,26 @@ MonoBehaviour:
   currentState: 0
   growthProgress: 0
   fullGrowthTime: 600
+  potRenderer: {fileID: 2997737303353298852}
+  timerText: {fileID: 7653889687949561157}
+--- !u!114 &4584655969015210000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099093662558331922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dae94b85f0a8f43b4ea5806d4e19c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  potID: 0
+  fullGrowthTimeMinutes: 5
+  emptySprite: {fileID: 0}
+  growingSprite: {fileID: 0}
+  ripeSprite: {fileID: 0}
+  multiplier: 0
   potRenderer: {fileID: 2997737303353298852}
   timerText: {fileID: 7653889687949561157}
