@@ -646,11 +646,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gardenLevel: 1
   maxPots: 20
-  gridParent: {fileID: 0}
-  potPrefab: {fileID: 0}
-  columns: 0
-  spacingX: 0
-  spacingY: 0
+  gridParent: {fileID: 251334537}
+  potPrefab: {fileID: 7099093662558331922, guid: 8def9b5febebfa24684494f4468fc444, type: 3}
+  columns: 4
+  spacingX: 1.25
+  spacingY: 1.25
   totalMultiplier: 0
   settlerMultipliers:
   - 0
