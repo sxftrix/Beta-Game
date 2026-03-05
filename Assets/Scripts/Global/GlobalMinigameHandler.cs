@@ -10,7 +10,6 @@ public class GlobalMinigameHandler : SerializedMonoBehaviour
     private string currentMinigameName;
     private bool minigamePlaying = false;
     
-    
     [Header("Resource Stock Dictionary (For Reference Only")]
     [SerializeField] private Dictionary<string, int> _earnedResources = new Dictionary<string, int>();
     

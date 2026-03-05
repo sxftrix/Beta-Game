@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Resources : MonoBehaviour
+public class GardenResources : MonoBehaviour
 {
-    public static Resources Instance { get; private set; }
+    public static GardenResources Instance { get; private set; }
 
     [Header("Player Resources")]
     public int resources;
