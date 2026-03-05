@@ -7,14 +7,19 @@ using System;
 public class GlobalMinigameHandler : SerializedMonoBehaviour
 {
     public static GlobalMinigameHandler Instance;
-    private string currentMinigameName;
-    private bool minigamePlaying = false;
     
-    [Header("Resource Stock Dictionary (For Reference Only")]
-    [SerializeField] private Dictionary<string, int> _earnedResources = new Dictionary<string, int>();
+    [Header("REQUIRED: Minigame List")]
+    [SerializeField] private List<string> minigameList = new List<string>(); //Add Scene name to Build Profiles and in this list through Inspector
+    
+    public static event Action OnMinigameStart;
+    public static event Action OnMinigameEnd;
+    
+    private string currentMinigame;
+    private bool minigamePlaying = false;
     
     private void Awake()
     {
+        BuildingMinigame.OnStartMinigame += LaunchMinigame;
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -23,20 +28,15 @@ public class GlobalMinigameHandler : SerializedMonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-    
-    private void InitializeMinigameEarnables (List<string> resources)
-    {
-        foreach (string resourceName in resources)
-        {
-            _earnedResources.Add(resourceName, 0);
-        }
-    }
 
-    private void OnMinigameEnd()
+    private void LaunchMinigame(string chosenGame)
     {
-        foreach (var resource in _earnedResources)
+        foreach (string minigame in minigameList)
         {
-            ResourceManager.Instance.GainResource(resource.Key, resource.Value);
+            if (minigame == chosenGame)
+            {
+                SceneManager.LoadScene(chosenGame);
+            }
         }
     }
 }

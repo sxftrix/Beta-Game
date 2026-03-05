@@ -1,9 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class ForagingGameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static ForagingGameManager Instance { get; private set; }
     public GameObject BeastSpawner, TreeSpawner;
 
     public int maxScrapEarnable;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-
+    
     void Start()
     {
         InvokeRepeating("IncreaseDifficulty", 2.5f, 2.5f);

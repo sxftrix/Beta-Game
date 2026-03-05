@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b9d8c04c609abe4c9f40d7ca968c641, type: 3}
-  m_Name: Gold
+  m_Name: Baboons
   m_EditorClassIdentifier: 
-  ResourceName: Gold
-  ResourceID: 001
+  ResourceName: Baboons
+  ResourceID: 000
   ResourceIcon: {fileID: 0}
-  Total: 72
-  Unlocked: 0
+  Total: 0

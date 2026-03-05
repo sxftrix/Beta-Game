@@ -7,13 +7,13 @@ public class ResourceTree : MonoBehaviour, IChop
 
     public void Chop()
     {
-        if (GameManager.Instance.reachedMaxScrap())
+        if (ForagingGameManager.Instance.reachedMaxScrap())
         {
-            GameManager.Instance.GainGold(goldYield);
+            ForagingGameManager.Instance.GainGold(goldYield);
         }
         else
         {
-            GameManager.Instance.GainScrap(scrapYield);
+            ForagingGameManager.Instance.GainScrap(scrapYield);
         }
         Destroy(gameObject);
     }

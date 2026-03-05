@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResourceName: Food
   ResourceID: 003
-  IsPremium: 
-  Unlocked: 0
   ResourceIcon: {fileID: 0}
   Total: 0
-  gainPerSecond: 1
+  Unlocked: 0

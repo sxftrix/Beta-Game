@@ -32,7 +32,6 @@ public class EntitySpawner : MonoBehaviour
         }
         Instantiate(entityToSpawn, spawnPosition, Quaternion.identity);
         yield return new WaitForSeconds(delay);
-        StartCoroutine(SpawnEntity(entityToSpawn, spawnMinDistance, spawnMaxDistance, delay));
     }
 
     public void UpgradeBeast()
