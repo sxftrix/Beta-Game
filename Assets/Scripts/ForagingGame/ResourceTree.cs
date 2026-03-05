@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tree : MonoBehaviour, IChop
+public class ResourceTree : MonoBehaviour, IChop
 {
     private int scrapYield = 1;
     private int goldYield = 1;

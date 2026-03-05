@@ -84,7 +84,7 @@ public class PotScript : MonoBehaviour
     }
 
     void StartPlanting() {
-        if (ResourceManager.Instance.SpendResources(1)) {
+        if (Resources.Instance.SpendResources(1)) {
             plantStartTime = DateTime.Now;
             SavePlantGrowth();
             SetState(PlantState.GROWING);
@@ -92,7 +92,7 @@ public class PotScript : MonoBehaviour
     }
 
     void CollectPlant() {
-        ResourceManager.Instance.AddResources(GetYield());
+        Resources.Instance.AddResources(GetYield());
         PlayerPrefs.DeleteKey($"Pot_{potID}_Time"); 
         SetState(PlantState.EMPTY);
     }

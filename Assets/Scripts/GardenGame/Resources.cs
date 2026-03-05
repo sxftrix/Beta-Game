@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ResourceManager : MonoBehaviour
+public class Resources : MonoBehaviour
 {
-    public static ResourceManager Instance { get; private set; }
+    public static Resources Instance { get; private set; }
 
     [Header("Player Resources")]
     public int resources;
