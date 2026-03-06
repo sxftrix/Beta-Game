@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Building))]
 public class MainSettlement : MonoBehaviour
 {
    public static MainSettlement Instance { get; private set; }

@@ -5,52 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3c707d-de01-4ea1-a516-f7b3dbfad3de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI_UX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI_UX/Camera.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI_UX/Camera/MainCamera.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI_UX/Camera/MainCamera.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Beta-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Beta-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/InspectorConfig.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Resource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Resource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/ResourceData/Food.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/ResourceData/Food.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/ResourceData/Gold.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObjects/ResourceData/Gold.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FishingGame.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FishingGame.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ForagingGame.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ForagingGame.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GardenScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GardenScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Game.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Game.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainGame/FishingPort.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainGame/FishingPort.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainGame/Garden.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainGame/Garden.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainGame/LumberMill.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainGame/LumberMill.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainGame/MainSettlement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainGame/MainSettlement.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameBackend.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameBackend.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonCheck.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonCheck.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForagingGame/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForagingGame/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForagingGame/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForagingGame/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ForagingGame/ResourceTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ForagingGame/ResourceTree.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/GlobalMinigameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/GlobalMinigameHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/ResourceManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global/ResourceManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/CameraControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/CameraControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/ErrorText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/ErrorText.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/GlobalGameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/GlobalGameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/LevelUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/LevelUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/ResourceUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/ResourceUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/SettlementBuilding.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/SettlementBuilding.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/UpgradeUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/UpgradeUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainGame/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/BuildingMinigame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainGame/BuildingMinigame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/BuildingUISet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainGame/BuildingUISet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/MainGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainGame/MainGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainGame/MainSettlement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainGame/MainSettlement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +30,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global/GlobalMinigameHAndler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainGame/BuildingMinigame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainGame/UISetAdder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Utils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -145,7 +113,8 @@
       <workItem from="1772692629585" duration="8438000" />
       <workItem from="1772705005941" duration="7028000" />
       <workItem from="1772715164232" duration="5567000" />
-      <workItem from="1772729702265" duration="16546000" />
+      <workItem from="1772729702265" duration="17181000" />
+      <workItem from="1772820196825" duration="3464000" />
     </task>
     <servers />
   </component>

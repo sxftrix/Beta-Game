@@ -19,10 +19,10 @@ public class BuildingMinigame : MonoBehaviour
         }
     }
     
-    public static event Action<string> OnStartMinigame;
+    public static event Action<string> OnChooseMinigame;
 
     private void ChooseMinigame(string gameName)
     {
-        OnStartMinigame?.Invoke(gameName);
+        OnChooseMinigame?.Invoke(gameName);
     }
 }

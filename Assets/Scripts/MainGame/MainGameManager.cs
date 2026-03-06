@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
@@ -18,9 +19,12 @@ public class MainGameManager : SerializedMonoBehaviour
     
     [Header("Turbo Mode: Turn on to boost Resource Gain by 2x")]
     [SerializeField] public bool turboModeOn;
-    
-    [Header("REFERENCE ONLY DON'T EDIT")]
+
+    [Header("REFERENCE ONLY DON'T EDIT")] 
+    public bool prestigeOn;
     public float prestigeMultiplier;
+
+    public static event Action<GameObject> OnBuildingConstructed; 
     
     private int buildingLevelCap;
     private GameObject toConstruct;
@@ -84,6 +88,7 @@ public class MainGameManager : SerializedMonoBehaviour
         {
             var building = Instantiate(toConstruct, constructLocation);
             building.transform.position = constructLocation.position;
+            OnBuildingConstructed?.Invoke(building);
         }
         ConstructButton.SetActive(false);
         ConstructButton.transform.position = Vector2.zero;

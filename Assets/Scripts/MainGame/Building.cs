@@ -9,7 +9,6 @@ public class Building : SerializedMonoBehaviour
     [Header("Required Parameters")] 
     [SerializeField] private string buildingName;
     [SerializeField] private int baseCostMultiplier;
-    [SerializeField] private BuildingUISet UISet;
     [SerializeField] private bool isMain;
     
     [Header("REFERENCE ONLY DON'T EDIT")] 
@@ -21,6 +20,7 @@ public class Building : SerializedMonoBehaviour
     private int _upgradeCost;
     
     public static event Action<Building, int> OnBuildingLevelUp;
+    public static event Action<Building, Dictionary<Resource, int>> OnCostsChange;
 
     /// <summary>
     /// MONOBEHAVIOR METHODS
@@ -33,9 +33,21 @@ public class Building : SerializedMonoBehaviour
         {
             var mainComponent = gameObject.AddComponent<MainSettlement>();
         }
-        LevelUp();
+        buildingLevel = 1;
+        if (isMain)
+        {
+            MainSettlement.Instance.updateMainLevel(buildingLevel);
+        }
+    }
+
+    private void Start()
+    {
         InitializeCosts();
-        UISet.InitializeUI(this);
+    }
+
+    private void OnDisable()
+    {
+        Resource.OnUnlockResource -= UpdateCosts;
     }
 
     /// <summary>
@@ -65,8 +77,8 @@ public class Building : SerializedMonoBehaviour
             {
                 upgradeCosts[resource] = 0;
             }
-        }
-        UISet.UpdateCosts(upgradeCosts);
+        } 
+        OnCostsChange?.Invoke(this, upgradeCosts);
     }
     
     private int SetNextUpgradeCost()
@@ -100,7 +112,6 @@ public class Building : SerializedMonoBehaviour
     {
         buildingLevel++;
         OnBuildingLevelUp.Invoke(this, buildingLevel);
-        UISet.UpdateLevel(buildingLevel);
         if (isMain)
         {
             MainSettlement.Instance.updateMainLevel(buildingLevel);

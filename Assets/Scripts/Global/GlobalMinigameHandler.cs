@@ -19,7 +19,7 @@ public class GlobalMinigameHandler : SerializedMonoBehaviour
     
     private void Awake()
     {
-        BuildingMinigame.OnStartMinigame += LaunchMinigame;
+        BuildingMinigame.OnChooseMinigame += LaunchMinigame;
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -35,7 +35,7 @@ public class GlobalMinigameHandler : SerializedMonoBehaviour
         {
             if (minigame == chosenGame)
             {
-                SceneManager.LoadScene(chosenGame);
+                SceneManager.LoadScene(chosenGame, LoadSceneMode.Additive);
             }
         }
     }

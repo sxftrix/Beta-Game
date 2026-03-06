@@ -27,12 +27,6 @@ public class InventoryManager : MonoBehaviour
         {
             resource.Reset();
             Debug.Log(resource.name);
-            if (CheatMode)
-            {
-                resource.Gain(100000);
-            }
         }
     } 
-    
-    
 }

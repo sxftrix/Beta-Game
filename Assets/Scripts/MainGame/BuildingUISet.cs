@@ -10,22 +10,39 @@ public class BuildingUISet : MonoBehaviour
     [SerializeField] private TextMeshProUGUI upgradeCostText;
     [SerializeField] private Button upgradeButton;
 
-    private Building sourceBuilding;
+    private Building targetBuilding;
+    
     public void InitializeUI(Building source)
     {
-        sourceBuilding = source;
+        targetBuilding = source;
         gameObject.SetActive(true);
         upgradeButton.onClick.AddListener(OnUpgradePress);
+        UpdateLevel(targetBuilding, targetBuilding.GetLevel);
     }
 
-    public void UpdateLevel(int level)
+    public void OnEnable()
     {
-        levelText.text = level.ToString();
+        Building.OnBuildingLevelUp += UpdateLevel;
+        Building.OnCostsChange += UpdateCosts;
+    }
+    
+    public void OnDisable()
+    {
+        Building.OnBuildingLevelUp -= UpdateLevel;
+        Building.OnCostsChange -= UpdateCosts;
     }
 
-    public void UpdateCosts(Dictionary<Resource, int> newCosts)
+    private void UpdateLevel(Building eventSource, int level)
     {
-        foreach (var cost in newCosts)
+        if (eventSource == targetBuilding)
+        {
+            levelText.text = level.ToString();
+        }
+    }
+
+    public void UpdateCosts(Building eventSource, Dictionary<Resource, int> newCosts)
+    {
+        if (eventSource == targetBuilding)
         {
             upgradeCostText.text = "";
             foreach (var key in newCosts.Keys)
@@ -40,7 +57,7 @@ public class BuildingUISet : MonoBehaviour
 
     void OnUpgradePress()
     {
-        sourceBuilding.TryUpgrade();
+        targetBuilding.TryUpgrade();
     }
     
 }
