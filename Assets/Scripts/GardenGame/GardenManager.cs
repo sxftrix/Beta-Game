@@ -21,7 +21,6 @@ public class GardenManager : MonoBehaviour
     // Placeholder to simulate settler multipliers and boost multipliers.
     // To be replaced with the proper system later in development.
     public float totalMultiplier;
-    public float[] settlerMultipliers = new float[2];
     public List<float> boostMultipliers = new List<float>();
 
     void Awake()
@@ -72,11 +71,9 @@ public class GardenManager : MonoBehaviour
     /// </summary>
     public void calculateTotalMultiplier()
     {
-        float settlerSum = 1.0f;
         float boostProduct = 1.0f;
-        foreach (float val in settlerMultipliers) settlerSum += val;
         foreach (float val in boostMultipliers) if (val > 1) boostProduct *= val;
-        totalMultiplier = settlerSum * boostProduct;
+        totalMultiplier = boostProduct;
     }
 
     /// <summary>
